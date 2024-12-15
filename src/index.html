@@ -6,18 +6,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
   </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="">
+      <span>Cinemania</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="#">CATALOG</a></li>
+      <li><a href="#">MY LIBRARY</a></li>
+    </ul>
+    <div class="theme-toggle">
+      <button id="myButton">
+        <div class="switch-images">
+          <img src="img/switch/moon.png" alt="">
+          <img src="img/switch/ellipse.png" alt="">
+          <img src="img/switch/sun.png" alt="">
+        </div>
+      </button>
+    </div>
+  </nav>
+  <header>
+    <div class="hero-section">
+      <img src="img/picture.jpg" alt="">
+      <div class="hero-content-wrapper">
+        <h1>Let's Make Your Own Cinema</h1>
+        <p>Is a guide to creating a personalized movie theater experience. You'll need a projector, screen, and
+          speakers. Decorate your space, choose your films, and stock up on snacks for the full experience.
+        </p>
+        <button class="teaser-button">Get Started</button>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+  <div class="section">
+    <div class="section-title">
+      <h2>Weekly Trends</h2>
+      <a href="#">See all</a>
+    </div>
+    <div class="row-3" id="movie-container">
+      <div class="movie-card">
+        <img class="movie-image" src="" alt="">
+        <div class="movie-card-info">
+          <div class="card-info-align">
+            <a href="#!" class="movie-card-content">
+              <h3 class="movie-title"></h3>
+              <div>
+                <span class="genre"></span> |
+                <span class="year"></span>
+              </div>
+            </a>
+            <div class="card-rating">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <load src="./partials/footer.html" />
+      <div class="movie-card">
+        <img class="movie-image" src="" alt="">
+        <div class="movie-card-info">
+          <div class="card-info-align">
+            <a href="#!" class="movie-card-content">
+              <h3 class="movie-title"></h3>
+              <div>
+                <span class="genre"></span> |
+                <span class="year"></span>
+              </div>
+            </a>
+            <div class="card-rating">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-half.png" alt="">
+              <img src="img/rating/star-border.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img class="movie-image" src="" alt="">
+        <div class="movie-card-info">
+          <div class="card-info-align">
+            <a href="#!" class="movie-card-content">
+              <h3 class="movie-title"></h3>
+              <div>
+                <span class="genre"></span> |
+                <span class="year"></span>
+              </div>
+            </a>
+            <div class="card-rating">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-full.png" alt="">
+              <img src="img/rating/star-half.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="section">
+    <div class="section-title">
+      <h2>Upcoming This Month</h2>
+    </div>
+    <div class="upcoming-movie">
+      <div class="upcoming-image">
+        <img src="./img/THELOSTCITY.jpg" alt="The Lost City">
+      </div>
+      <div class="upcoming-info">
+        <h3>The Lost City</h3>
+        <ul>
+          <li>
+            <div class="label">Release date</div>
+            <div class="date">03.03.2023</div>
+          </li>
+          <li>
+            <div class="label">Vote / Votes</div>
+            <div class="votes">
+              <span>7.3</span> / <span>1260</span>
+            </div>
+          </li>
+          <li>
+            <div class="label">Popularity</div>
+            <div class="other-info">99.9</div>
+          </li>
+          <li>
+            <div class="label">Genre</div>
+            <div class="other-info">Comedy, action</div>
+          </li>
+        </ul>
+        <h6>ABOUT</h6>
+        <p>
+          Reclusive author Loretta Sage writes about exotic places in her popular adventure novels that
+          feature a handsome cover model named Alan. While on tour promoting her new book with Alan, Loretta
+          gets kidnapped by an eccentric billionaire who hopes she can lead him to an ancient city's lost
+          treasure from her latest story. Determined to prove he can be a hero in real life and not just on
+          the pages of her books, Alan sets off to rescue her.
+        </p>
+        <button>Add to my library</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 | All Rights Reserved | Developed with ❤️ by Sci-Fi Students</p>
+  </footer>
+
+  <!-- Teaser Modal -->
+  <div class="teaser-modal-bg">
+    <div class="teaser-modal">
+      <div class="modal-header">
+        <span class="close-modal">X</span>
+      </div>
+      <div class="teaser-modal-content">
+        <h5>
+          OOPS... <br>
+          We are very sorry! <br>
+          But we couldn't find the trailer.
+        </h5>
+        <img src="img/oops.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- movie detail modal -->
+  <div id="teaser-modal-bg" class="teaser-modal-bg">
+    <div class="modal-header">
+      <img id="modal-image" src="" alt="Film Poster">
+      <h3 id="modal-title"></h3>
+      <p id="modal-genre"></p>
+      <p id="modal-overview"></p>
+    </div>
+  </div>
+
+    <script src="./js/script.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
