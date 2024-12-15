@@ -6,123 +6,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/index-1rQMrW1_.css">
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-1lSuGeab.css">
   </head>
-  <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
-
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="/vanilla-app-template/assets/logo-0Qq06bqf.svg" alt="">
+      <span>Cinemania</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="#">CATALOG</a></li>
+      <li><a href="#">MY LIBRARY</a></li>
     </ul>
+    <div class="theme-toggle">
+      <button id="myButton">
+        <div class="switch-images">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADoSURBVHgBlZKNFcEwFIUTE2QDtUFGqAkwgZqADdoNrMAEbFCdABO0JmCDuo9LI/Qk3jnfycnLu3k/iVKetW1rwApM1T8GwRLUYAeOofiBI8yxZGAMLuCkYgzCjBkN9yVIY8UiTJx9lHjAoEZr3Tj+G0iCYmDB2fNXYB4jNszk2kYyh55LxA0Yuk60IJfNwFqG2SfWnHANRhS9jUMsmWDLVbHag2aQBFQQF78yMHvqVGh42TMDuILgkBBj/ad1nfnHQXdueCYx9tGz+u6xABPpSXVPKOXK5OXLLl5/QveUJpdYIibBe3+gd05ZpDsIS+lkAAAAAElFTkSuQmCC" alt="">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEmSURBVHgBpZQ/S8NAGMafdtSlLi4OBicRhCx2joN0dXHuB3Fx8RsIbja7i6tTEJc6iBIQt8ba4qScilKk5h7vPdtqS/8l94MnhHD8eHLcvcAYSAYmNZOEf9z0vgWYhVnkm0ScTWLiYUoLxfmRtf6oxOPHo2J9m3y9yuCyMtus2HNFjI9K/DZvi+vIQMmk1m+zS9VierxGfraZk0AaVfXlCbBUBhZWkJOqiDzduANWd+CAbeTjqY3C8gYc8Oxm84tACidE9AAj4nMLDtyK6KK4VYG+r8OBpojCQrkCXp8DnXfkJLRPcw6i7uEe07MD5iAZ6OSYp41Ydfc3qePTLJLBFfkv8/VLU7HzlkUSjP1RsXN4Bk0i4ujNnyCUkRLyd5j1SThlsP0A2YMhUuC5lvwAAAAASUVORK5CYII=" alt="">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADaSURBVHgBvVPBDcIwDHQq/pQNYAIYoRvQFZgANqi6ARswAxMAIzBBYQJggnKnusKtqFPx4KRTEp9jO4kj4qCu6y2483wS8REi+ieAZivMOsOQkjr/WlXSyzajM1hhXmgAoqBNAy2MvQvd/LAZjZYPadaJWXJHb6sbFE8SAX1sFRNeijTn57kuEscVZLIl9yXSfap0RICnjqFf2k9H6IuVd8v6EpU4Du0z5o6WWXswDm3jHMEDeJPmUqfgCpyDG3AN3kMIe+6znfhS4Qyy20pjL2mjputx+MtvfAPQP6zGdR3ETwAAAABJRU5ErkJggg==" alt="">
+        </div>
+      </button>
+    </div>
+  </nav>
+  <header>
+    <div class="hero-section">
+      <img src="/vanilla-app-template/assets/picture-CwgT8nIZ.jpg" alt="">
+      <div class="hero-content-wrapper">
+        <h1>Let's Make Your Own Cinema</h1>
+        <p>Is a guide to creating a personalized movie theater experience. You'll need a projector, screen, and
+          speakers. Decorate your space, choose your films, and stock up on snacks for the full experience.
+        </p>
+        <button class="teaser-button">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="section-title">
+      <h2>Weekly Trends</h2>
+      <a href="#">See all</a>
+    </div>
+    <div class="row-3" id="movie-container">
+      <div class="movie-card">
+        <img class="movie-image" src="" alt="">
+        <div class="movie-card-info">
+          <div class="card-info-align">
+            <a href="#!" class="movie-card-content">
+              <h3 class="movie-title"></h3>
+              <div>
+                <span class="genre"></span> |
+                <span class="year"></span>
+              </div>
+            </a>
+            <div class="card-rating">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-card">
+        <img class="movie-image" src="" alt="">
+        <div class="movie-card-info">
+          <div class="card-info-align">
+            <a href="#!" class="movie-card-content">
+              <h3 class="movie-title"></h3>
+              <div>
+                <span class="genre"></span> |
+                <span class="year"></span>
+              </div>
+            </a>
+            <div class="card-rating">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI/SURBVHgBvVI7aBRRFL33vTff/RBUhMyu8ZNAQLFRhCCijYiFYhCihbIgLIguCDZrtXFRoqaw8NeJoIhNarGwsooWam8URJJd1MLNZ2Zn5/Oub1ZEs4QdCOip5nHPnHPueQ/gf8E94Rx3TzoX03gsnUAVzuXRdF4ftCecIWR4iATbSWdG8usWYgz2AycCjZ75undq3UIk4Czp6KtEL0CDw/24+GN824AWhVtVD3mhIwEChZpy0FiOSM4ouUXrcbPoXxh8z0x+PkoMGJJmRhSqb02VqF9vvhW2jIbIlrNgo5AMPEIArsRiiEH101HHIHGMBLvDZVzhAiUIkGEMkus4TAwsd8qpYELqlmrgc8qRg5xagKiMqbudagit+83RVStPj+ba3vKkCjYCnFfN2vxctyNrpvHFfLqwm3yYJsIB0sgCQyXRIUTzV6LfcGuDezve0hNl0Vi2wlIi0u2otzSvXBjjWXmPLNyorqKVJDOnmnuSmV8vHFPncgxwLVNvvOt7a/bDhdcxh88qUYd0CFS64A+ZGsBhvldkTSHvcrGAFh4gnb6DTiFqLB/VnXIy0yD8QIJ20INd2VQhzuQ+zMCK6geRQRFjeBMiHezcLNwAO5Mlga+CYPFIqpDM0gRYap0QHObDLWOycc662ixJRnMB79wmIZdIk2O9/60q261ucfiGaBYkfozbVM2oh/b33L+7eRiZqKkXv8mw49NY+uqumci2ZRZX8JHRCsZ7RRKYl759Co3oCjB6GQSwHf4FfgKOo+xfYiUvZQAAAABJRU5ErkJggg==" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIpSURBVHgBpZJLaBNBGMe/b2Z2s0mbthctu5Fo1CLFW3tQPOtBiKiIRREqQqHaQMGT+KhGSw8qYlG8iKAUxILgAy+CBbH04MHHveKlj43twVfc7Csz42wPYrdpAu3AwAzf//t9T4AGx8lbB7yD1kAjHWkkYDr0gwb71wVyj1pZySADTHTKE9tb1gwiGuwRRExhgjz29ErPmkGSyB5g5Amn+FqVt7eeFn8c2tKWEtWs0HkrIEqJIEFXDCZbJODt5CO7MxJWzlifmUH6gaAMIQSgKLUEqDdA03DpI0vRalYin0JADhQmFUtEYkDCkYj7/yJqOMolL6iXoAy5pKCEcitjJOWMWAWMRFFTkcILYHJSaHgr9dCerVvy9R1p3/11SQXrAELOGUNzX5Z6lHxqzxjjdpegZFZlNO6fNo+sBnGGzG7fLY8BoaWyEZyMIDWFlb723W7BfOsPmofjNq+YyftXzWdO0eqK21ZMLfVg4b2a0ExIsBy3cU3a6s43Fe1PDUGVs5vUAmJH86g9Ef39Yvsx95rVtxQkDKcJJbnFezub435sBdkQ3VLKCTmy2fTC4HK0DoSKpHsjk3NAu8t0711r9fs+JX1eNyM1kzxqMOcHwRil+MG4UhpIXPx2Cgifprp/EzT8rSa7K+6FyxBRFl7wEinOc4DheC9+3tm4LamRC5KRDYkEP469C07NjPywmla79KqcTPfWamjb4OLXAOR55fXmTwC5/21/AR/p1Mcjj2UnAAAAAElFTkSuQmCC" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img class="movie-image" src="" alt="">
+        <div class="movie-card-info">
+          <div class="card-info-align">
+            <a href="#!" class="movie-card-content">
+              <h3 class="movie-title"></h3>
+              <div>
+                <span class="genre"></span> |
+                <span class="year"></span>
+              </div>
+            </a>
+            <div class="card-rating">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgBpZI/aBRBFMbfmz97dwTF5kiyp2Cj3VkHOxHSaKE5FJQ0gmgSREhzaSQES0srC+0kYiE2VnYKVoKVRbASDDkFwRw5z7vczDy/2b3AcQlZSAaG3bcz75vv++0QFYy/c1NLvUZtsWifKtqgtbpPRu4dS6hzY7IuWlIxknbn04tHFrKJukmGPBt2lMjMkYVE0QwbclFMWbp82F7+c+3sqbLp1w2zEJMMbPxKYq2ccMQvSItnRV40BzJmQSfSHtAA8FhsiSSKtPsnv3Hv+uRVUvqlaPJoCqzJoUk4r4dTBcpqCnnNHi6DsMAp+6Clqcpvf70Lmq4gwnfKYmSbHABjwolRqMXlrMJguA6H4sBu0wktVR61PvJexu6d9IwhWYboHNxJBpglxCaQDJkAHEdnOCAwq1c75f7z6srvnYzROLT+wnQDYg9Y83QeAyKK80gmPmnbEzUn1ra+HPrXSs9abxBzmyycID+mw7uTOBE52LAxLnKgUHf5dA2nnhvCzWBzZATADDFW6kLnSXWqUIgTfynyQPNAbATOG2C2md8nAIZYkiSzxUKKbhEEwMkD4HqnsrtYXm01AP01WHlE9E5LfV/faCFrtfN9F9YRoy06PK6s/vwwut57ms7ioNu4Z9WSVSt898fXAx11nE8R47NP7Py4SBzlh1vvE+2buE+f/qndidG1/1JX5o3MvYYSAAAAAElFTkSuQmCC" alt="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI/SURBVHgBvVI7aBRRFL33vTff/RBUhMyu8ZNAQLFRhCCijYiFYhCihbIgLIguCDZrtXFRoqaw8NeJoIhNarGwsooWam8URJJd1MLNZ2Zn5/Oub1ZEs4QdCOip5nHPnHPueQ/gf8E94Rx3TzoX03gsnUAVzuXRdF4ftCecIWR4iATbSWdG8usWYgz2AycCjZ75undq3UIk4Czp6KtEL0CDw/24+GN824AWhVtVD3mhIwEChZpy0FiOSM4ouUXrcbPoXxh8z0x+PkoMGJJmRhSqb02VqF9vvhW2jIbIlrNgo5AMPEIArsRiiEH101HHIHGMBLvDZVzhAiUIkGEMkus4TAwsd8qpYELqlmrgc8qRg5xagKiMqbudagit+83RVStPj+ba3vKkCjYCnFfN2vxctyNrpvHFfLqwm3yYJsIB0sgCQyXRIUTzV6LfcGuDezve0hNl0Vi2wlIi0u2otzSvXBjjWXmPLNyorqKVJDOnmnuSmV8vHFPncgxwLVNvvOt7a/bDhdcxh88qUYd0CFS64A+ZGsBhvldkTSHvcrGAFh4gnb6DTiFqLB/VnXIy0yD8QIJ20INd2VQhzuQ+zMCK6geRQRFjeBMiHezcLNwAO5Mlga+CYPFIqpDM0gRYap0QHObDLWOycc662ixJRnMB79wmIZdIk2O9/60q261ucfiGaBYkfozbVM2oh/b33L+7eRiZqKkXv8mw49NY+uqumci2ZRZX8JHRCsZ7RRKYl759Co3oCjB6GQSwHf4FfgKOo+xfYiUvZQAAAABJRU5ErkJggg==" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</article>
 
-    </main>
-
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="section">
+    <div class="section-title">
+      <h2>Upcoming This Month</h2>
+    </div>
+    <div class="upcoming-movie">
+      <div class="upcoming-image">
+        <img src="/vanilla-app-template/assets/THELOSTCITY-BNo8SxK1.jpg" alt="The Lost City">
+      </div>
+      <div class="upcoming-info">
+        <h3>The Lost City</h3>
+        <ul>
+          <li>
+            <div class="label">Release date</div>
+            <div class="date">03.03.2023</div>
+          </li>
+          <li>
+            <div class="label">Vote / Votes</div>
+            <div class="votes">
+              <span>7.3</span> / <span>1260</span>
+            </div>
+          </li>
+          <li>
+            <div class="label">Popularity</div>
+            <div class="other-info">99.9</div>
+          </li>
+          <li>
+            <div class="label">Genre</div>
+            <div class="other-info">Comedy, action</div>
+          </li>
+        </ul>
+        <h6>ABOUT</h6>
+        <p>
+          Reclusive author Loretta Sage writes about exotic places in her popular adventure novels that
+          feature a handsome cover model named Alan. While on tour promoting her new book with Alan, Loretta
+          gets kidnapped by an eccentric billionaire who hopes she can lead him to an ancient city's lost
+          treasure from her latest story. Determined to prove he can be a hero in real life and not just on
+          the pages of her books, Alan sets off to rescue her.
+        </p>
+        <button>Add to my library</button>
+      </div>
+    </div>
   </div>
-</footer>
 
+  <footer>
+    <p>© 2023 | All Rights Reserved | Developed with ❤️ by Sci-Fi Students</p>
+  </footer>
 
+  <!-- Teaser Modal -->
+  <div class="teaser-modal-bg">
+    <div class="teaser-modal">
+      <div class="modal-header">
+        <span class="close-modal">X</span>
+      </div>
+      <div class="teaser-modal-content">
+        <h5>
+          OOPS... <br>
+          We are very sorry! <br>
+          But we couldn't find the trailer.
+        </h5>
+        <img src="/vanilla-app-template/assets/oops-o-pojUFo.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- movie detail modal -->
+  <div id="teaser-modal-bg" class="teaser-modal-bg">
+    <div class="modal-header">
+      <img id="modal-image" src="" alt="Film Poster">
+      <h3 id="modal-title"></h3>
+      <p id="modal-genre"></p>
+      <p id="modal-overview"></p>
+    </div>
+  </div>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
