@@ -31,8 +31,8 @@
     </div>
   </nav>
   <header>
-    <div class="hero-section">
-      <img src="img/picture.jpg" alt="">
+    <div class="hero-section" id="heroSection">
+      <div id="hero-img"></div>
       <div class="hero-content-wrapper">
         <h1>Let's Make Your Own Cinema</h1>
         <p>Is a guide to creating a personalized movie theater experience. You'll need a projector, screen, and
@@ -56,7 +56,7 @@
             <a href="#!" class="movie-card-content">
               <h3 class="movie-title"></h3>
               <div>
-                <span class="genre"></span> |
+                <span class="genre" id="genre"></span> |
                 <span class="year"></span>
               </div>
             </a>
@@ -78,7 +78,7 @@
             <a href="#!" class="movie-card-content">
               <h3 class="movie-title"></h3>
               <div>
-                <span class="genre"></span> |
+                <span class="genre" id="genre"></span> |
                 <span class="year"></span>
               </div>
             </a>
@@ -99,7 +99,7 @@
             <a href="#!" class="movie-card-content">
               <h3 class="movie-title"></h3>
               <div>
-                <span class="genre"></span> |
+                <span class="genre" id="genre"></span> |
                 <span class="year"></span>
               </div>
             </a>
@@ -121,29 +121,27 @@
       <h2>Upcoming This Month</h2>
     </div>
     <div class="upcoming-movie">
-      <div class="upcoming-image">
-        <img src="./img/THELOSTCITY.jpg" alt="The Lost City">
-      </div>
+      <div id="upcoming-image"></div>
       <div class="upcoming-info">
-        <h3>The Lost City</h3>
+        <h3 id="upcoming-title">The Lost City</h3>
         <ul>
           <li>
             <div class="label">Release date</div>
-            <div class="date">03.03.2023</div>
+            <div id="date"></div>
           </li>
           <li>
             <div class="label">Vote / Votes</div>
             <div class="votes">
-              <span>7.3</span> / <span>1260</span>
+              <span id="vote-average">7.3</span> / <span id="vote-count">1260</span>
             </div>
           </li>
           <li>
             <div class="label">Popularity</div>
-            <div class="other-info">99.9</div>
+            <div class="other-info" id="popularity"></div>
           </li>
           <li>
             <div class="label">Genre</div>
-            <div class="other-info">Comedy, action</div>
+            <div class="other-info genre" id="genre"></div>
           </li>
         </ul>
         <h6>ABOUT</h6>
@@ -191,6 +189,9 @@
   </div>
 
     <script src="./js/script.js"></script>
+    <script src="./js/daily-trends.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/upcoming.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

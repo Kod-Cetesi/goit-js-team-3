@@ -93,7 +93,7 @@ body {
     background-color: #111;
 }
 
-.hero-section img {
+#hero-img {
     position: absolute;
     z-index: 0;
     width: auto;
@@ -101,6 +101,10 @@ body {
     right: 0;
     bottom: 0;
     top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: -webkit-fill-available;
+    opacity: 0.5;
 }
 
 .hero-content-wrapper {
@@ -122,6 +126,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    margin-bottom: 16px;
 }
 
 button {
@@ -266,8 +271,12 @@ button:hover {
     align-items: flex-start;
 }
 
-.upcoming-image {
+#upcoming-image {
     width: 60%;
+    height: 500px;
+    max-height: max-content;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .upcoming-image img {
@@ -301,7 +310,7 @@ button:hover {
     width: 150px;
 }
 
-.upcoming-info ul li .date {
+.upcoming-info ul li #date {
     color: #F84119;
 }
 
@@ -324,6 +333,7 @@ button:hover {
     color: #f8f8f8;
     font-weight: 300;
     line-height: 22px;
+    margin-bottom: 16px;
 }
 
 /* Footer */
