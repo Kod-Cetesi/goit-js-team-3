@@ -264,6 +264,56 @@ button:hover {
     margin: 0px 2px;
 }
 
+/* Movie Card Modal */
+
+#movie-modal {
+    background-color: #111111b0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-card-content {
+    max-width: 700px;
+    width: 100%;
+    height: max-content;
+    border-radius: 20px;
+    box-shadow: 1px 1px 14px 4px #FF6B086B;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    background-color: #111;
+}
+
+.modal-card-content img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+.close-card-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.movie-card-modal-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
 /* Upcoming This Month */
 
 .upcoming-movie {
