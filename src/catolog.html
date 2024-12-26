@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Movie Trailer Project coded by the Kod-Cetesi Team">
+    <link rel="icon" href="./img/movie.png" type="image/x-icon">
+    <script>
+        var localS = localStorage.getItem("theme");
+        if (localS === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+    <title>Cinemania</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/catalog.css">
+    <script type="module" src="./js/api-service-2.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body class="catalog-page">
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="/index.html" class="logo">
+                <img class="logo-img" src="./img/cinemania.png" alt="logo">
+                <span class="logo-text">Cinemania</span>
+            </a>
+            <div class="mobile-menu-container" id="mobile-menu-container" data-menu>
+                <a href="/index.html" class="mob-menu-logo">
+                    <img class="mob-menu-logo-img" src="./img/cinemania.png" alt="logo" class="mob-menu-logo-img">
+                </a>
+                <nav class="site-nav">
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="/index.html" class="nav-menu index-page">Home</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="/cinemania/catalog.html" class="nav-menu catalog-page">Catalog</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="/cinemania/my-library.html" class="nav-menu my-library-page">My Library</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <button type="button" class="header-menu-btn" data-menu-open>Menu</button>
+            <div class="theme" id="theme-switcher">
+                <button class="toggle-dark-mode"></button>
+            </div>
+        </div>
+        <div class="backdrop visually-hidden" data-backdrop></div>
+    </header>
+    <main>
+        <section class="second-section">
+            <div class="hero-container">
+                <div class="hero">
+                    <div class="hero-div">
+                        <div class="hero-div-text">
+                            <h1 class="hero-title">Quantumania</h1>
+                            <div class="hero-rating">
+                                <!-- Yıldızlar burada görünecek -->
+                            </div>
+                            <div class="hero-movie-text-div"></div>
+                            <p class="hero-description " id="movie-text">
+                                Super-Hero find themselves exploring the Quantum Realm, interacting with strange new
+                                creatures and embarking on an adventure that will push them beyond the limits of what
+                                they thought possible.
+                            </p>
+                        </div>
+                        <div class="watch-trailer">
+                            <button class="watch-trailer-btn" type="button">Watch Trailer
+                            </button>
+                            <button class="more-details-btn" type="button">More Details
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="trailer-modal"></div>
+        </div>
+        </section>
+
+        <section class="search-section">
+            <div>
+                <input id="search-input" class="search-input" placeholder="Ara">
+            </div>
+
+            <div>
+                <select name="membership" id="membership" class="search-dropdown">
+                    <option class="search-option" value="">Ara</option>
+                    <!-- 2000 ile 2024 arasındaki yıllar -->
+                    <option class="search-option" value="2000">2000</option>
+                    <option class="search-option" value="2001">2001</option>
+                    <option class="search-option" value="2002">2002</option>
+                    <option class="search-option" value="2003">2003</option>
+                    <option class="search-option" value="2004">2004</option>
+                    <option class="search-option" value="2005">2005</option>
+                    <option class="search-option" value="2006">2006</option>
+                    <option class="search-option" value="2007">2007</option>
+                    <option class="search-option" value="2008">2008</option>
+                    <option class="search-option" value="2009">2009</option>
+                    <option class="search-option" value="2010">2010</option>
+                    <option class="search-option" value="2011">2011</option>
+                    <option class="search-option" value="2012">2012</option>
+                    <option class="search-option" value="2013">2013</option>
+                    <option class="search-option" value="2014">2014</option>
+                    <option class="search-option" value="2015">2015</option>
+                    <option class="search-option" value="2016">2016</option>
+                    <option class="search-option" value="2017">2017</option>
+                    <option class="search-option" value="2018">2018</option>
+                    <option class="search-option" value="2019">2019</option>
+                    <option class="search-option" value="2020">2020</option>
+                    <option class="search-option" value="2021">2021</option>
+                    <option class="search-option" value="2022">2022</option>
+                    <option class="search-option" value="2023">2023</option>
+                    <option class="search-option" value="2024">2024</option>
+                </select>
+            </div>
+
+            <div>
+                <button class="search-btn" src="./img/icon-button.png" id="search-btn">
+                    <img src="./img/icon-button.png">
+                </button>
+            </div>
+
+            </div>
+
+        </section>
+
+        <main>
+            <section id="movies" class="movie-grid"></section>
+        </main>
+
+    </main>
+
+
+    <load src="./partials/footer.html" />
+</body>
+
+
+
+</html>
