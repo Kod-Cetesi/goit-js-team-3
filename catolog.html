@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Movie Trailer Project coded by the Kod-Cetesi Team">
     <link rel="icon" href="./img/movie.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,500;1,500&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <script>
         var localS = localStorage.getItem("theme");
         if (localS === "light") {
@@ -15,26 +19,20 @@
     <title>Cinemania</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/catalog.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <script type="module" crossorigin src="/vanilla-app-template/catolog.js"></script>
   <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/api-service-2-Do44Dpm1.js">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/api-service-2-Do356ZrO.css">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/catolog-D3dPRjNx.css">
 </head>
 
 <body class="catalog-page">
     <header class="site-header">
         <div class="container header-container">
-            <a href="/index.html" class="logo">
+            <a href="./index.html" class="logo">
                 <img class="logo-img" src="data:image/png;base64,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" alt="logo">
-                <span class="logo-text">Cinemania</span>
+                <text class="logo-text">Cinemania</text>
             </a>
             <div class="mobile-menu-container" id="mobile-menu-container" data-menu>
                 <a href="/index.html" class="mob-menu-logo">
@@ -43,25 +41,31 @@
                 <nav class="site-nav">
                     <ul class="nav-list">
                         <li class="nav-list-item">
-                            <a href="/index.html" class="nav-menu index-page">Home</a>
+                            <a href=".//index.html" class="nav-menu index-page">Home</a>
                         </li>
                         <li class="nav-list-item">
-                            <a href="/cinemania/catalog.html" class="nav-menu catalog-page">Catalog</a>
+                            <a href="./catolog.html" class="nav-menu catalog-page">Catalog</a>
                         </li>
                         <li class="nav-list-item">
-                            <a href="/cinemania/my-library.html" class="nav-menu my-library-page">My Library</a>
+                            <a href="./library.html" class="nav-menu my-library-page">My Library</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <button type="button" class="header-menu-btn" data-menu-open>Menu</button>
             <div class="theme" id="theme-switcher">
-                <button class="toggle-dark-mode"></button>
+                <div class="toggle">
+                    <span class="icon sun"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADWSURBVHgBvVMBDQIxDOw+CHgcgAKQ8A54CzjAAf8OcIAGFPyQgIKBAkDB6IV+UhbWfULCJZfvel3bdXsiAzHGHWjFVPQjqqTaXq0b/tSg2F+7SjuYI5gZ2O4kAdDBJ4kWyv8J2XzXFZXW5jQdhCqtoY/dZUVPBXDMoLuYqYHgXJ7KuDBRbI1FOsR6QoIHZVpD1oEKSI+QisGastxEICNgvMbW0BrtdyoArxAzODGPzCvzLL4VvR/Qlrlh3pxzB+zTQ3yK4JlLtnvxY2g9fNAkbhr+8je+ANN3rMUPR+I/AAAAAElFTkSuQmCC"></span>
+                    <div class="circle"></div>
+                    <span class="icon moon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADoSURBVHgBlZKBEYIwDEVTF5ANxA0YAScQJ5AR3AA2cAWdQDcAJ1AnACZQJ8Af+UoFuWLu3vWa5DdNWpGO1XXtgQ2I5B+jqAAHcHblTyxhgmUNFqACFxljEMas6HGfgXCsWIW+tR8lnjCpMsaUlv8BfKcYBNLvL5emf6dY+7x3/Dut7HouFZdgZjvRgh62Alsd5pDYcMIFmFP0MQ4xY4E9V+Ftc8MkTThBnP6qwOqhtEOc8rCmArgB55CQE3Sf1nYmX4E27jGmOcGrZ+n3mIKlNM91ZUgHGnEfv/+EGbiaHhIQNU0+dgf6BE8cpDt96n49AAAAAElFTkSuQmCC"></span>
+                </div>
             </div>
         </div>
         <div class="backdrop visually-hidden" data-backdrop></div>
     </header>
+
     <main>
+        <!-- Hero Section -->
         <section class="second-section">
             <div class="hero-container">
                 <div class="hero">
@@ -83,23 +87,20 @@
                             </button>
                             <button class="more-details-btn" type="button">More Details
                             </button>
-
                         </div>
                     </div>
                 </div>
-        </section>
-        <div class="trailer-modal"></div>
-        </div>
+            </div>
         </section>
 
         <section class="search-section">
             <div>
                 <input id="search-input" class="search-input" placeholder="Ara">
             </div>
-
+        
             <div>
                 <select name="membership" id="membership" class="search-dropdown">
-                    <option class="search-option" value="">Ara</option>
+                    <option class="search-option select" value="Ara">Ara</option>
                     <!-- 2000 ile 2024 arasındaki yıllar -->
                     <option class="search-option" value="2000">2000</option>
                     <option class="search-option" value="2001">2001</option>
@@ -128,42 +129,58 @@
                     <option class="search-option" value="2024">2024</option>
                 </select>
             </div>
-
+        
             <div>
                 <button class="search-btn" src="./img/icon-button.png" id="search-btn">
-                    <img src="./img/icon-button.png">
+                    <img src="data:image/png;base64,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">
                 </button>
             </div>
-
+        
             </div>
-
+        
         </section>
 
-        <main>
-            <section id="movies" class="movie-grid"></section>
-        </main>
+        <!-- Modal Structure -->
+        <div id="movie-modal" class="modal visually-hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img id="modal-poster" src="" alt="Movie Poster">
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-vote">Vote / Votes <span id="modal-votes"></span></p>
+                    <p class="modal-vote">Popularity <span id="modal-popularity"></span></p>
+                    <p class="modal-vote">Genre <span id="modal-genre"></span></p>
+                    <p class="modal-vote">ABOUT</p>
+                    <span class="modal-overview-title" id="modal-overview"></span>
+                    <button id="add-to-library"><span class="modal-button">Add to my library</span></button>
+                </div>
+            </div>
+        </div>
 
+
+
+
+        <section id="movies" class="movie-grid"></section>
+
+        <div class="pagination">
+            <button id="prev-btn" class="pagination-btn">&lt;</button>
+            <div class="page-numbers"></div>
+            <button id="next-btn" class="pagination-btn">&gt;</button>
+        </div>
     </main>
 
-
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/tr/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Te4m K0d Cetes1
-      </a>
-    </p>
-  </div>
-</footer>
-
+        <div class="container">
+            <p class="footer-desc">
+                Made with ✨ by
+                <a class="footer-link" href="https://goit.global/tr/" target="_blank" rel="noopener noreferrer">
+                    Te4m K0d Cetes1
+                </a>
+            </p>
+        </div>
+    </footer>
+<link rel="stylesheet" href="./css/catalog.css">
+    
 </body>
-
-
 
 </html>
