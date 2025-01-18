@@ -13,6 +13,10 @@ const modalVotes = document.getElementById('modal-votes');
 const modalPopularity = document.getElementById('modal-popularity');
 const modalGenre = document.getElementById('modal-genre');
 const modalOverview = document.getElementById('modal-overview');
+const addToLibraryButton = document.getElementById('add-to-library');
+
+// Kullanıcı hangi filme tıkladıysa onu tutan değişken
+let currentMovie = null;
 
 // Kartlara tıklama olayını dinleme
 document.addEventListener('click', async (event) => {
@@ -47,7 +51,7 @@ async function fetchMovieDetails(movieId) {
             throw new Error(`Film detayları getirilemedi: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data); // API yanıtını konsola yazdır
+        console.log("Movie Data:", data); // API yanıtını konsola yazdır
         return data;
     } catch (error) {
         console.error('Error fetching movie details:', error);
@@ -55,17 +59,10 @@ async function fetchMovieDetails(movieId) {
     }
 }
 
-
 // Modalı açma fonksiyonu
 function openModal(movie) {
     try {
-        const modal = document.getElementById('movie-modal');
-        const modalPoster = document.getElementById('modal-poster');
-        const modalTitle = document.getElementById('modal-title');
-        const modalVotes = document.getElementById('modal-votes');
-        const modalPopularity = document.getElementById('modal-popularity');
-        const modalGenre = document.getElementById('modal-genre');
-        const modalOverview = document.getElementById('modal-overview');
+        currentMovie = movie; // Seçili filmi sakla
 
         modalPoster.src = movie.poster_path
             ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
@@ -78,17 +75,18 @@ function openModal(movie) {
             : 'N/A';
         modalOverview.textContent = movie.overview || 'No description available.';
 
+        // Modal'ı aç
         modal.classList.remove('visually-hidden');
+        document.body.style.overflow = 'hidden'; // Arkaplan kaydırmayı engelle
     } catch (error) {
         console.error('Error opening modal:', error);
     }
 }
 
-
-
 // Modalı kapatma fonksiyonu
 function closeModal() {
     modal.classList.add('visually-hidden');
+    document.body.style.overflow = 'auto'; // Arkaplan kaydırmayı aç
 }
 
 // Modal kapatma butonunu dinleme
@@ -98,5 +96,18 @@ closeButton.addEventListener('click', closeModal);
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
         closeModal();
+    }
+});
+
+// **Filmi Library'ye Kaydetme**
+addToLibraryButton.addEventListener('click', () => {
+    let savedMovies = JSON.parse(localStorage.getItem('library')) || [];
+
+    if (!savedMovies.some(movie => movie.id === currentMovie.id)) {
+        savedMovies.push(currentMovie);
+        localStorage.setItem('library', JSON.stringify(savedMovies));
+        alert("Movie added to library!");
+    } else {
+        alert("This movie is already in your library.");
     }
 });

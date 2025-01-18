@@ -1,28 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load
-      src="./partials/header.html"
-      icon-path="./img/sprite.svg#logo"
-      highlight-curr="active"
-    />
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Movie Trailer Project coded by the Kod-Cetesi Team">
+  <link rel="icon" href="./img/movie.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/library.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,500;1,500&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <script>
+    var localS = localStorage.getItem("theme");
+    if (localS === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  </script>
+  <title>Cinemania</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="catalog-page">
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo">
+        <img class="logo-img" src="./img/cinemania.png" alt="logo">
+        <text class="logo-text">Cinemania</text>
+      </a>
+      <div class="mobile-menu-container" id="mobile-menu-container" data-menu>
+        <a href="/index.html" class="mob-menu-logo">
+          <img class="mob-menu-logo-img" src="./img/cinemania.png" alt="logo" class="mob-menu-logo-img">
+        </a>
+        <nav class="site-nav">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href=".//index.html" class="nav-menu index-page">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="./catolog.html" class="nav-menu catalog-page">Catalog</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="./library.html" class="nav-menu my-library-page">My Library</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button type="button" class="header-menu-btn" data-menu-open>Menu</button>
+      <div class="theme" id="theme-switcher">
+        <div class="toggle">
+          <span class="icon sun"><img src="./img/sun.png"></span>
+          <div class="circle"></div>
+          <span class="icon moon"><img src="./img/moon.png"></span>
+        </div>
+      </div>
+    </div>
+    <div class="backdrop visually-hidden" data-backdrop></div>
+  </header>
+
+  <section class="hero">
+    <img src="./img/d2.png">
+      <h1 class="hero-div-h1">Create Your Dream Cinema</h1>
+      <p class="hero-div-p">Is a guide to designing a personalized movie theater experience with the right equipment, customized decor, and favorite films. This guide helps you bring the cinema experience into your own home with cozy seating, dim lighting, and movie theater snacks.</p>
+    <img>
+  </section>
 
     <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> to page 3
-        </h1>
-        <load src="./partials/back-link.html" />
-      </div>
+      <div id="library-movies" class="movie-grid"></div>
     </main>
 
-    <load src="./partials/footer.html" />
-  </body>
+  <main>
+    <script type="module" src="./js/api-service-2.js"></script>
+    <script src="./js/library.js"></script>
+</body>
+
+
 </html>
