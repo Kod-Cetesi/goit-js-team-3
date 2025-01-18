@@ -174,46 +174,50 @@ async function displayMovies(movies) {
     moviesGrid.innerHTML = '<p>No movies found.</p>';
   } else {
     for (let movie of movies) {
-      const { title, poster_path, vote_average, release_date, genre_ids } =
-        movie;
+      const { id, title, poster_path, vote_average, release_date, genre_ids } = movie;
 
       // Film türlerini almak için TMDB API'sinden alınan tür ID'leriyle eşleşen isimleri almak
       const genres = genre_ids
-        ? await Promise.all(genre_ids.map(genreId => getGenreNameById(genreId)))
+        ? await Promise.all(genre_ids.map((genreId) => getGenreNameById(genreId)))
         : [];
       const genreNames = genres.join(', ') || 'N/A';
 
+      // Film kartını oluşturma
       const movieCard = document.createElement('div');
       movieCard.classList.add('movie-card');
+      movieCard.setAttribute('data-id', id); // data-id ekleniyor
+
       movieCard.innerHTML = `
-                <div class="movie-poster-container">
-                    <img 
-                        class="movie-poster" 
-                        src="${
-                          poster_path
-                            ? IMAGE_BASE_URL + poster_path
-                            : 'https://via.placeholder.com/200x300?text=No+Image'
-                        }" 
-                        alt="${title}" 
-                    />
-                    <div class="movie-overlay">
-                        <h3 class="movie-title">${title}</h3>
-                        <p class="movie-release-date">${
-                          release_date
-                            ? new Date(release_date).getFullYear()
-                            : 'N/A'
-                        }</p>
-                        <p class="movie-genres">${genreNames}</p>
-                    </div>
-                </div>
-                <div class="movie-info">
-                    <p class="movie-rating">⭐ ${vote_average.toFixed(1)}</p>
-                </div>
-            `;
+        <div class="movie-poster-container">
+          <img 
+            class="movie-poster" 
+            src="${
+              poster_path
+                ? IMAGE_BASE_URL + poster_path
+                : 'https://via.placeholder.com/200x300?text=No+Image'
+            }" 
+            alt="${title}" 
+          />
+          <div class="movie-overlay">
+            <h3 class="movie-title">${title}</h3>
+            <div class="movie-date-genres">
+            <p class="movie-release-date">${
+              release_date ? new Date(release_date).getFullYear() : 'N/A'
+            }</p>
+            <p class="movie-genres">${genreNames}</p>
+          </div>
+          </div>
+        </div>
+        <div class="movie-info">
+          <p class="movie-rating">⭐ ${vote_average.toFixed(1)}</p>
+        </div>
+      `;
+
       moviesGrid.appendChild(movieCard);
     }
   }
 }
+
 
 // Genre ID'lerini tür isimlerine dönüştürmek için fonksiyon
 async function getGenreNameById(genreId) {
@@ -231,11 +235,15 @@ async function getGenreNameById(genreId) {
 }
 
 // Gece modu geçişini başlatan fonksiyon
-function toggleDarkMode() {
-  const body = document.body;
-  const isDarkMode = body.classList.toggle('dark-mode');
-  localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-}
+const themeSwitcher = document.getElementById('theme-switcher');
+const body = document.body;
+
+themeSwitcher.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const isDarkMode = body.classList.contains('dark-mode');
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+});
+
 
 // Sayfa yüklendiğinde kullanıcı tercihlerini kontrol et
 document.addEventListener('DOMContentLoaded', () => {
@@ -244,10 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('dark-mode');
   }
 
-  const toggleButton = document.querySelector('.toggle-dark-mode');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', toggleDarkMode);
-  }
 
   // Rastgele bir film yükle
   fetchRandomMovie();
@@ -256,4 +260,14 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchMovies(
     `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
   );
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Kartlara tıklayınca ID'yi konsola yazdır
+  document.addEventListener('click', (event) => {
+    const card = event.target.closest('.movie-card');
+    if (card) {
+      console.log(card.getAttribute('data-id')); // Kartın ID'sini konsolda yazdırır
+    }
+  });
 });
