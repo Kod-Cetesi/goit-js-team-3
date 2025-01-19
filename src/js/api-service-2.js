@@ -174,11 +174,12 @@ async function displayMovies(movies) {
     moviesGrid.innerHTML = '<p>No movies found.</p>';
   } else {
     for (let movie of movies) {
-      const { id, title, poster_path, vote_average, release_date, genre_ids } = movie;
+      const { id, title, poster_path, vote_average, release_date, genre_ids } =
+        movie;
 
       // Film türlerini almak için TMDB API'sinden alınan tür ID'leriyle eşleşen isimleri almak
       const genres = genre_ids
-        ? await Promise.all(genre_ids.map((genreId) => getGenreNameById(genreId)))
+        ? await Promise.all(genre_ids.map(genreId => getGenreNameById(genreId)))
         : [];
       const genreNames = genres.join(', ') || 'N/A';
 
@@ -205,19 +206,19 @@ async function displayMovies(movies) {
               release_date ? new Date(release_date).getFullYear() : 'N/A'
             }</p>
             <p class="movie-genres">${genreNames}</p>
+            <div class="movie-info">
+              <p class="movie-rating">⭐ ${vote_average.toFixed(1)}</p>
+            </div>
           </div>
           </div>
         </div>
-        <div class="movie-info">
-          <p class="movie-rating">⭐ ${vote_average.toFixed(1)}</p>
-        </div>
+
       `;
 
       moviesGrid.appendChild(movieCard);
     }
   }
 }
-
 
 // Genre ID'lerini tür isimlerine dönüştürmek için fonksiyon
 async function getGenreNameById(genreId) {
@@ -244,14 +245,12 @@ themeSwitcher.addEventListener('click', () => {
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
 
-
 // Sayfa yüklendiğinde kullanıcı tercihlerini kontrol et
 document.addEventListener('DOMContentLoaded', () => {
   const darkMode = localStorage.getItem('darkMode');
   if (darkMode === 'enabled') {
     document.body.classList.add('dark-mode');
   }
-
 
   // Rastgele bir film yükle
   fetchRandomMovie();
@@ -264,10 +263,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Kartlara tıklayınca ID'yi konsola yazdır
-  document.addEventListener('click', (event) => {
+  document.addEventListener('click', event => {
     const card = event.target.closest('.movie-card');
     if (card) {
       console.log(card.getAttribute('data-id')); // Kartın ID'sini konsolda yazdırır
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const moviesContainer = document.getElementById("movies");
+  const loadMoreButton = document.getElementById("load-more");
+
+  let visibleRows = 2;
+  const rowHeight = 600; 
+  const cardsPerRow = 3;
+
+  loadMoreButton.addEventListener("click", () => {
+    visibleRows++;
+
+    moviesContainer.style.gridTemplateRows = `repeat(${visibleRows}, ${rowHeight}px)`;
+    moviesContainer.style.maxHeight = `${visibleRows * rowHeight + 60}px`;
+    const totalCards = moviesContainer.children.length;
+    if (visibleRows * cardsPerRow >= totalCards) {
+      loadMoreButton.style.display = "none";
     }
   });
 });

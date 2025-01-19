@@ -144,7 +144,7 @@ button {
 
 .moon {
   position: absolute;
-  right: 22px;
+  right: 30px;
   opacity: 0; /* Gündüz modunda gizli */
 }
 
@@ -154,7 +154,7 @@ body.dark-mode .toggle {
 }
 
 body.dark-mode .circle {
-  transform: translateX(30px);
+  transform: translateX(20px);
 }
 
 body.dark-mode .sun {
@@ -358,6 +358,27 @@ body {
     line-height: 1.16;
     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
+  }
+
+  .movie-card {
+    flex: 0 1 calc(100% - 0px) !important;
+  }
+
+  #movies {
+    padding: 16px !important;
+  }
+
+  .search-section {
+    gap: 10px !important;
+    margin-top: 20px;
+  }
+
+  .search-input {
+    width: 220px !important;
+  }
+
+  .container {
+    max-width: 100%;
   }
 }
 
@@ -589,7 +610,6 @@ body.my-library-page .nav-menu.my-library-page,
 
 @media (min-width: 1280px) {
   .hero-container {
-    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -608,6 +628,12 @@ body.my-library-page .nav-menu.my-library-page,
   background-position: center;
   background-position-x: center;
   background-position-y: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5%;
+
+  
 }
 
 @media (min-width: 1280px) {
@@ -633,33 +659,19 @@ body.my-library-page .nav-menu.my-library-page,
 }
 
 @media (min-width: 768px) {
-  .hero-div {
-    padding-top: 62px;
-    padding-left: 32px;
-  }
+
 }
 @media (min-width: 1280px) {
-  .hero-div {
-    padding-top: 158px;
-  }
+
 }
 
 @media (min-width: 1280px) {
-  .hero-div-text {
-    max-width: 464px;
-    margin-left: 25px;
-  }
+
 }
 @media (min-width: 768px) {
-  .hero-div-text {
-    max-width: 357px;
-    margin-bottom: 32px;
-  }
+
 }
-.hero-div-text {
-  max-width: 228px;
-  margin-bottom: 20px;
-}
+
 
 .star-rating {
   display: flex;
@@ -734,7 +746,7 @@ body.dark-mode {
 }
 
 .hero-description {
-  width: 367px;
+  width: 50%;
   color: #f8f8f8;
   font-size: 14px;
   font-weight: 400;
@@ -743,8 +755,6 @@ body.dark-mode {
   font-size: 16px;
   line-height: 18.75px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 @media (min-width: 1280px) {
@@ -761,10 +771,10 @@ body.dark-mode {
 }
 .watch-trailer {
   display: flex;
-  padding: 12px 24px;
-  justify-content: baseline;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .watch-trailer-btn {
@@ -980,13 +990,14 @@ body.dark-mode {
 
 /* Genel Grid Ayarları */
 #movies {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 80px; /* Kartlar arasındaki boşluk */
-  padding: 100px;
-  padding-top: 0px;
-  justify-content: center;
+  padding: 0px 60px;
+  max-height: 1240px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 650px;
+  grid-template-rows: repeat(2, 620px);
+  transition: grid-template-rows 0.3s ease;
 }
 
 /* Film Kartları */
@@ -996,8 +1007,9 @@ body.dark-mode {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 374px;
-  height: 574px;
+  flex: 0 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  height: 600px !important;
 }
 
 .movie-card:hover {
@@ -1022,13 +1034,9 @@ body.dark-mode {
   font-weight: 500;
   margin: 10px 0;
   color: white;
-  padding-top: 450px;
-  padding-right: 450px;
-  width: 700px;
-  height: 0px;
+  width: max-content;
   display: flex;
   font-family: 'Roboto', sans-serif;
-  line-height: 23px;
 }
 
 .movie-rating {
@@ -1057,25 +1065,37 @@ body.dark-mode {
   height: 48px;
   background-color: transparent;
   border-radius: 8px;
-  color: white;
+  color: #000;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 14px;
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  border-color: white;
-  border-width: 1px;
+  border: 1px solid #000;
+}
+
+.dark-mode .search-input {
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .search-dropdown {
   width: 95px;
   height: 48px;
   background-color: transparent;
-  color: white;
+  color: #000;
   text-align: center;
   font-weight: 500;
   border-radius: 8px;
+  text-align: left;
+  padding: 0px 5px;
+  border: 1px solid #000;
+}
+
+.dark-mode .search-dropdown {
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .search-option {
@@ -1100,7 +1120,6 @@ body.dark-mode {
 .movie-poster-container {
   position: relative;
   display: block;
-  width: 400px;
 }
 
 .movie-poster {
@@ -1115,7 +1134,7 @@ body.dark-mode {
   font-family: 'Roboto', sans-serif;
   color: white;
   width: 100%;
-  height: 700px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1130,7 +1149,6 @@ body.dark-mode {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   line-height: 23px;
-  margin-top: 50px;
 }
 
 s .movie-release-date,
@@ -1147,26 +1165,23 @@ s .movie-release-date,
 }
 
 .movie-card {
-  position: relative;
-  width: 400px; /* Kartın genişliği */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: #fff;
-  margin: 15px;
   transition: transform 0.3s;
   height: auto;
 }
 
 .movie-card img {
   width: 100%; /* Resmin genişliği, kart genişliğine uyacak şekilde */
-  height: auto; /* Yükseklik orantılı olarak ayarlanacak */
+  height: 100%; /* Yükseklik orantılı olarak ayarlanacak */
   object-fit: cover; /* Resmin kapsaması için */
   display: block;
 }
 
 .movie-card .movie-info {
-  padding: 10px;
+  padding: 10px 0px;
   text-align: center;
 }
 
@@ -1174,13 +1189,10 @@ s .movie-release-date,
   margin: 5px 0;
 }
 
-.movie-card:hover {
-  transform: scale(1.05); /* Hover efekti */
-}
 
 .movie-poster-container {
   position: relative;
-  height: 500px; /* Resim alanı yüksekliği */
+  height: 100%; /* Resim alanı yüksekliği */
 }
 
 .movie-overlay {
@@ -1196,6 +1208,9 @@ s .movie-release-date,
     rgba(0, 0, 0, 0) 43.48%,
     rgba(0, 0, 0, 0.9) 80.16%
   );
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .movie-grid {
@@ -1206,6 +1221,7 @@ s .movie-release-date,
 }
 
 .movie-card {
+  margin: 0;
   background-color: #222;
   color: white;
   border-radius: 8px;
@@ -1288,4 +1304,24 @@ s .movie-release-date,
 .page-numbers {
   display: flex;
   gap: 16px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+}
+
+#load-more {
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 70px;
+  cursor: pointer;
+  transition: 0.3s;
 }

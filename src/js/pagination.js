@@ -163,3 +163,4 @@ async function changePage(newPage) {
     await loadMovies(newPage);
   }
 }
+

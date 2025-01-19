@@ -142,7 +142,7 @@ button {
 
 .moon {
   position: absolute;
-  right: 22px;
+  right: 30px;
   opacity: 0; /* Gündüz modunda gizli */
 }
 
@@ -288,6 +288,7 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
   display: flex;
+  padding: 0px 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -601,6 +602,12 @@ body.my-library-page .nav-menu.my-library-page,
   align-items: center; /* Dikeyde ortalama */
   height: 100vh; /* Sayfanın tamamını kaplaması için */
   max-width: 100%;
+  max-height: 660px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
   height: auto;
 }
 
@@ -612,17 +619,19 @@ body.my-library-page .nav-menu.my-library-page,
   font-family: 'Roboto', sans-serif;
   margin-right: 600px;
   margin-bottom: 250px;
+  color: #fff;
 }
 
 #library-movies {
   display: flex;
-  gap: 90px;
+  gap: 16px;
 }
 
 .hero-div-p {
   width: 520px;
   position: absolute;
   margin-right: 520px;
+  color: #fff;
 }
 
 .movie-grid {
@@ -630,7 +639,7 @@ body.my-library-page .nav-menu.my-library-page,
   flex-wrap: wrap;
   gap: 30px;
   padding-top: 20px;
-  padding-left: 100px;
+  padding: 0px 60px;
 }
 
 .movie-card {
@@ -674,7 +683,7 @@ body.my-library-page .nav-menu.my-library-page,
   outline: none;
   cursor: pointer;
   margin-top: 80px;
-  margin-left: 32px;
+  margin-left: 60px;
 }
 
 .filter-dropdown:hover {
@@ -1202,7 +1211,6 @@ s .movie-release-date,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: #fff;
-  margin: 15px;
   transition: transform 0.3s;
   height: auto;
 }

@@ -72,10 +72,10 @@ function renderMovies(movies) {
                         }</p>
                            
                         </div>
-                    </div>
-                </div>
                 <div class="movie-info">
                     <p class="movie-rating">⭐ ${movie.vote_average?.toFixed(1) || "N/A"}</p>
+                </div>
+                    </div>
                 </div>
             </div>
             `;
@@ -151,3 +151,5 @@ async function initialize() {
 }
 
 initialize();
+
+

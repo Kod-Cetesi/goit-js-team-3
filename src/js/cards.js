@@ -50,7 +50,7 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
       const movieYear = movies.release_date.split('-')[0];
 
       // kartları gez
-      const movieCards = document.querySelectorAll('.movie-card');
+      const movieCards = document.querySelectorAll('.movie-card-index');
       const movieCard = movieCards[i];
 
       // çağır
@@ -65,10 +65,10 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
       // Modal işlevi bağlama
       movieCard.addEventListener('click', () => {
         modalContent.innerHTML = `
-          <div class="movie-card-modal-img">
+          <div class="movie-card-index-modal-img">
             <img src="${imageUrl}" alt="${movieTitle}">
           </div>
-          <div class="movie-card-modal-detail">
+          <div class="movie-card-index-modal-detail">
             <h2>${movieTitle}</h2>
             <div>
               <span>Vote / Votes</span>
